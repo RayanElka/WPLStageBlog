@@ -4,19 +4,19 @@ export const posts: Post[] = [
   {
     id: "1",
     week: 1,
-    title: "Start & Onboarding",
+    title: "Start & Eerste Tickets",
     dateRange: "02 feb - 09 feb",
     excerpt:
-      "De eerste week: kennismaking met het team, development environment setup en projectanalyse.",
+      "Week 1: installaties, sprint/scrum meetings, codebase verkenning en de eerste frontend tickets.",
     content:
-      "Mijn stage bij het bedrijf is officieel begonnen. De eerste week stond voornamelijk in het teken van onboarding en de fundering leggen voor mijn stageproject.\n\nNa een warm welkom en het installeren van mijn development environment (VS Code, Git, Docker), ben ik meteen de diepte in gedoken met de codebase. Ik heb geleerd dat een goede voorbereiding het halve werk is.\n\nHet meest uitdagende was het begrijpen van de bestaande architectuur en de verschillende microservices die met elkaar communiceren. Daarnaast heb ik de eerste wireframes geschetst voor een nieuwe feature die ik ga bouwen.",
+      "Mijn stage bij het bedrijf is officieel begonnen. De eerste week stond in het teken van een vlotte start en meteen meedraaien.\n\nDag 1: installaties afgerond en de eerste sprint meeting + scrum meeting bijgewoond.\nDag 2: samen de codebase bekeken en twee front-end tickets opgepakt: (1) container line code display in de transport overview, (2) ToDo check column.\n\nDe eerste indruk: veel context oppikken, maar ook direct bijdragen met concrete taken.",
     achievements: [
-      "Development environment opgezet",
-      "Codebase analyse voltooid",
-      "Eerste wireframes gemaakt",
-      "Team kennismaking & onboarding",
+      "Installaties en environment setup afgerond",
+      "Sprint meeting en scrum meeting bijgewoond",
+      "Codebase samen verkend",
+      "2 front-end tickets opgepakt",
     ],
-    technologies: ["React", "TypeScript", "Git", "Figma", "Docker"],
+    technologies: ["React", "TypeScript", "Git", "Figma"],
     tags: ["onboarding", "setup", "analyse"],
     imageUrl: "",
   },
