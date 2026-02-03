@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Hash, ArrowRight, Calendar, ChevronRight, Tag } from "lucide-react";
+import { Hash, ArrowRight, Calendar, ChevronRight } from "lucide-react";
 import { posts } from "../data/posts";
 
 const Landing: React.FC = () => {

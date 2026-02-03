@@ -99,7 +99,7 @@ const Blog: React.FC = () => {
 
             {/* Timeline items */}
             <div className="timeline-items">
-              {filteredPosts.map((post, index) => {
+              {filteredPosts.map((post) => {
                 const isExpanded = expandedWeeks.has(post.id);
 
                 return (
