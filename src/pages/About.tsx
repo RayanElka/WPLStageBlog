@@ -1,13 +1,8 @@
 import React from "react";
-import {
-  Linkedin,
-  Github,
-  Mail,
-  MapPin,
-  Briefcase,
-  Terminal,
-  Award,
-} from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { MapPin, Briefcase, Terminal, Award } from "lucide-react";
 
 const About: React.FC = () => {
   return (
@@ -34,23 +29,23 @@ const About: React.FC = () => {
                     href="https://www.linkedin.com/in/rayan-el-kaouid"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-link"
+                    className="social-link social-link--linkedin"
                   >
-                    <Linkedin />
+                    <FontAwesomeIcon icon={faLinkedinIn} />
                   </a>
                   <a
                     href="https://github.com/RayanElka"
-                    target="_blank"
+                    target="https://github.com/RayanElka?tab=repositories"
                     rel="noopener noreferrer"
-                    className="social-link"
+                    className="social-link social-link--github"
                   >
-                    <Github />
+                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                   <a
-                    href="mailto:rayan.elkaouid@student.thomasmore.be"
-                    className="social-link"
+                    href="mailto:rayanelkaouid@gmail.com"
+                    className="social-link social-link--mail"
                   >
-                    <Mail />
+                    <FontAwesomeIcon icon={faAt} />
                   </a>
                 </div>
 
@@ -63,7 +58,6 @@ const About: React.FC = () => {
                       "Node.js",
                       "Git",
                       "AWS",
-                      "Docker",
 
                       "SQL",
                     ].map((skill) => (
