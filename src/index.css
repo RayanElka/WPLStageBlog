@@ -492,6 +492,25 @@ footer {
   z-index: 1;
 }
 
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+
+  .navbar-container {
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container,
+  .navbar-container {
+    max-width: 1600px;
+  }
+}
+
 /* Hero Section */
 .hero {
   padding: 6rem 1rem;
