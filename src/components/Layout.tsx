@@ -1,11 +1,15 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { useTranslation } from "react-i18next";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const { t } = useTranslation();
+  const year = new Date().getFullYear();
+
   return (
     <div className="app-layout">
       <div className="background-glow">
@@ -19,17 +23,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="footer-container">
           <div className="footer-content">
             <p className="footer-text">
-              &copy; {new Date().getFullYear()}{" "}
-              <span className="footer-accent">WPL_Stage</span>. All rights
-              reserved.
+              &copy; {year}{" "}
+              <span className="footer-accent">WPL_Stage</span>.{" "}
+              {t("footer.rights")}
             </p>
             <div className="footer-meta">
               <span className="footer-badge">
-                Build Status:{" "}
-                <span className="footer-badge-value">Passing</span>
+                {t("footer.buildStatusLabel")}:{" "}
+                <span className="footer-badge-value">
+                  {t("footer.buildStatusValue")}
+                </span>
               </span>
               <span className="footer-badge">
-                Version: <span className="footer-badge-value">1.0.0</span>
+                {t("footer.versionLabel")}:{" "}
+                <span className="footer-badge-value">1.0.0</span>
               </span>
             </div>
           </div>

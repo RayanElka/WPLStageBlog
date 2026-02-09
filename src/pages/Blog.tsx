@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from "react";
 import { Calendar, Award, Wrench, ChevronDown, ChevronUp } from "lucide-react";
 import { posts } from "../data/posts";
+import { useTranslation } from "react-i18next";
 
 const Blog: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [expandedWeeks, setExpandedWeeks] = useState<Set<string>>(
     new Set(["1"]),
@@ -39,27 +41,26 @@ const Blog: React.FC = () => {
         <div className="internship-hero">
           <div className="internship-hero-content">
             <h1 className="internship-title">
-              Building <span className="gradient-text">Experience</span>
+              {t("blog.titlePrefix")}{" "}
+              <span className="gradient-text">{t("blog.titleHighlight")}</span>
               <br />
-              at Trans-IT.
+              {t("blog.titleSuffix")}
             </h1>
             <p className="internship-subtitle">
-              Een 15-weken durende reis door frontend development, backend
-              integratie, en professionele software engineering. Van eerste
-              analyse tot productie deployment.
+              {t("blog.subtitle")}
             </p>
             <div className="internship-meta">
               <div className="meta-item">
-                <span className="meta-label">COMPANY</span>
+                <span className="meta-label">{t("labels.company")}</span>
                 <span className="meta-value">Trans-IT</span>
               </div>
               <div className="meta-item">
-                <span className="meta-label">ROLE</span>
-                <span className="meta-value">Stagiair</span>
+                <span className="meta-label">{t("labels.role")}</span>
+                <span className="meta-value">{t("blog.roleValue")}</span>
               </div>
               <div className="meta-item">
-                <span className="meta-label">DURATION</span>
-                <span className="meta-value">15 Weken</span>
+                <span className="meta-label">{t("labels.duration")}</span>
+                <span className="meta-value">{t("blog.durationValue")}</span>
               </div>
             </div>
           </div>
@@ -67,13 +68,13 @@ const Blog: React.FC = () => {
 
         {/* Filter Section */}
         <div className="timeline-filters">
-          <h3 className="filter-title">FILTER BY TAG</h3>
+          <h3 className="filter-title">{t("labels.filterByTag")}</h3>
           <div className="filter-tags">
             <button
               onClick={() => setSelectedTag(null)}
               className={`timeline-filter-btn ${selectedTag === null ? "active" : ""}`}
             >
-              All
+              {t("labels.all")}
             </button>
             {allTags.map((tag) => (
               <button
@@ -81,7 +82,7 @@ const Blog: React.FC = () => {
                 onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
                 className={`timeline-filter-btn ${selectedTag === tag ? "active" : ""}`}
               >
-                {tag}
+                {t(`tags.${tag}`)}
               </button>
             ))}
           </div>
@@ -90,7 +91,8 @@ const Blog: React.FC = () => {
         {/* Timeline */}
         <div className="timeline-section">
           <h2 className="timeline-heading">
-            <Calendar style={{ width: "24px", height: "24px" }} /> TIMELINE
+            <Calendar style={{ width: "24px", height: "24px" }} />{" "}
+            {t("labels.timeline")}
           </h2>
 
           <div className="timeline-container">
@@ -121,10 +123,14 @@ const Blog: React.FC = () => {
                       >
                         <div className="timeline-header-info">
                           <div className="timeline-week-label">
-                            WEEK {post.week}
+                            {t("labels.week", { week: post.week })}
                           </div>
-                          <h3 className="timeline-title">{post.title}</h3>
-                          <div className="timeline-date">{post.dateRange}</div>
+                          <h3 className="timeline-title">
+                            {t(post.titleKey)}
+                          </h3>
+                          <div className="timeline-date">
+                            {t(post.dateRangeKey)}
+                          </div>
                         </div>
                         <div className="timeline-toggle">
                           {isExpanded ? <ChevronUp /> : <ChevronDown />}
@@ -135,12 +141,12 @@ const Blog: React.FC = () => {
                         <div className="timeline-body">
                           {post.imageUrl && (
                             <div className="timeline-image">
-                              <img src={post.imageUrl} alt={post.title} />
+                              <img src={post.imageUrl} alt={t(post.titleKey)} />
                             </div>
                           )}
 
                           <div className="timeline-description">
-                            {post.content
+                            {t(post.contentKey)
                               .split("\n")
                               .map(
                                 (paragraph, i) =>
@@ -157,10 +163,14 @@ const Blog: React.FC = () => {
                                 <Award
                                   style={{ width: "16px", height: "16px" }}
                                 />
-                                KEY ACHIEVEMENTS
+                                {t("labels.keyAchievements")}
                               </h4>
                               <ul className="achievement-list">
-                                {post.achievements.map((achievement, i) => (
+                                {(
+                                  t(post.achievementsKey, {
+                                    returnObjects: true,
+                                  }) as string[]
+                                ).map((achievement, i) => (
                                   <li key={i}>{achievement}</li>
                                 ))}
                               </ul>
@@ -172,7 +182,7 @@ const Blog: React.FC = () => {
                                 <Wrench
                                   style={{ width: "16px", height: "16px" }}
                                 />
-                                TECHNOLOGIES USED
+                                {t("labels.technologiesUsed")}
                               </h4>
                               <div className="tech-list">
                                 {post.technologies.map((tech, i) => (

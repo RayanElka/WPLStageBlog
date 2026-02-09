@@ -1,11 +1,11 @@
 export interface Post {
   id: string;
   week: number;
-  title: string;
-  dateRange: string;
-  excerpt: string;
-  content: string;
-  achievements: string[];
+  titleKey: string;
+  dateRangeKey: string;
+  excerptKey: string;
+  contentKey: string;
+  achievementsKey: string;
   technologies: string[];
   tags: string[];
   imageUrl?: string;

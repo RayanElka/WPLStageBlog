@@ -3,8 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { MapPin, Briefcase, Terminal, Award } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
+  const objectives = t("about.objectives", {
+    returnObjects: true,
+  }) as string[];
+
   return (
     <div className="section">
       <div className="container">
@@ -21,7 +27,7 @@ const About: React.FC = () => {
                 </div>
                 <h2 className="profile-name">Rayan El Kaouid</h2>
                 <div className="profile-role">
-                  <Terminal /> Full Stack Student
+                  <Terminal /> {t("about.profileRole")}
                 </div>
 
                 <div className="profile-socials">
@@ -50,7 +56,9 @@ const About: React.FC = () => {
                 </div>
 
                 <div className="profile-tech">
-                  <h3 className="profile-tech-title">Tech Stack</h3>
+                  <h3 className="profile-tech-title">
+                    {t("about.techStack")}
+                  </h3>
                   <div className="tech-tags">
                     {[
                       "React",
@@ -75,13 +83,9 @@ const About: React.FC = () => {
           <div className="about-content">
             {/* About Text */}
             <div className="content-section">
-              <h2>About_Me</h2>
+              <h2>{t("about.heading")}</h2>
               <p>
-                Ik ben een gepassioneerde student Programmeren die altijd op
-                zoek is naar de "waarom" achter de code. Tijdens mijn studie heb
-                ik een liefde ontwikkeld voor clean code en intuïtieve user
-                interfaces. Deze stage is voor mij de kans om de theorie om te
-                zetten naar productie-ready software.
+                {t("about.description")}
               </p>
             </div>
 
@@ -91,39 +95,46 @@ const About: React.FC = () => {
 
               <h3 className="stage-card-title">
                 <Briefcase />
-                Stage Details
+                {t("about.stageTitle")}
               </h3>
 
               <div className="stage-grid">
                 <div className="stage-item">
-                  <span className="stage-item-label">COMPANY</span>
+                  <span className="stage-item-label">
+                    {t("labels.company")}
+                  </span>
                   <span className="stage-item-value">Trans-IT</span>
                 </div>
                 <div className="stage-item">
-                  <span className="stage-item-label">LOCATION</span>
+                  <span className="stage-item-label">
+                    {t("labels.location")}
+                  </span>
                   <span className="stage-item-value">
                     Heist-op-den-berg <MapPin />
                   </span>
                 </div>
                 <div className="stage-item">
-                  <span className="stage-item-label">ROLE</span>
-                  <span className="stage-item-value">Stagiair</span>
+                  <span className="stage-item-label">{t("labels.role")}</span>
+                  <span className="stage-item-value">
+                    {t("about.roleValue")}
+                  </span>
                 </div>
                 <div className="stage-item">
-                  <span className="stage-item-label">DURATION</span>
-                  <span className="stage-item-value">Feb '26 - Jun '26</span>
+                  <span className="stage-item-label">
+                    {t("labels.duration")}
+                  </span>
+                  <span className="stage-item-value">
+                    {t("about.durationValue")}
+                  </span>
                 </div>
               </div>
 
               <div className="stage-objectives">
                 <h4>
-                  <Award /> Learning Objectives
+                  <Award /> {t("about.objectivesTitle")}
                 </h4>
                 <div className="objectives-list">
-                  {[
-                    "Diepgaande kennis van React en TypeScript opdoen",
-                    "Ervaring met AWS cloud services verzamelen",
-                  ].map((goal, idx) => (
+                  {objectives.map((goal, idx) => (
                     <div key={idx} className="objective-item">
                       <div className="objective-number">{idx + 1}</div>
                       <span className="objective-text">{goal}</span>

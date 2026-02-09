@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Hash, ArrowRight, Calendar, ChevronRight } from "lucide-react";
 import { posts } from "../data/posts";
+import { useTranslation } from "react-i18next";
 
 const Landing: React.FC = () => {
+  const { t } = useTranslation();
   const latestPost = [...posts].sort((a, b) => b.week - a.week)[0];
 
   return (
@@ -18,23 +20,21 @@ const Landing: React.FC = () => {
                   <span className="pulse-ring"></span>
                   <span className="pulse-core"></span>
                 </div>
-                System Online: Stage 2026
+                {t("hero.badge")}
               </div>
               <h1 className="hero-title">
-                <span className="gradient-text">Dev Journey</span>
-                <span className="hero-subtitle">&gt; Start_Logging...</span>
+                <span className="gradient-text">{t("hero.titleMain")}</span>
+                <span className="hero-subtitle">{t("hero.titleSub")}</span>
               </h1>
               <p className="hero-description">
-                Het portfolio en logboek van mijn WPL-stage. Volg mijn
-                voortgang, bekijk mijn code snippets en leer mee van mijn fouten
-                en successen.
+                {t("hero.description")}
               </p>
               <div className="hero-buttons">
                 <Link to="/blog" className="btn btn-primary">
-                  <Hash /> Read DevLog
+                  <Hash /> {t("hero.readDevlog")}
                 </Link>
                 <Link to="/about" className="btn btn-secondary">
-                  <span>./about_me.sh</span>
+                  <span>{t("hero.aboutCta")}</span>
                 </Link>
               </div>
             </div>
@@ -108,11 +108,12 @@ const Landing: React.FC = () => {
             <div className="section-header">
               <div>
                 <h2 className="section-title">
-                  <span className="section-title-icon">#</span> Latest_Log
+                  <span className="section-title-icon">#</span>{" "}
+                  {t("sections.latestLog")}
                 </h2>
               </div>
               <Link to="/blog" className="section-link">
-                view_all_logs() <ChevronRight />
+                {t("sections.viewAllLogs")} <ChevronRight />
               </Link>
             </div>
 
@@ -125,22 +126,25 @@ const Landing: React.FC = () => {
                     latestPost.imageUrl ||
                     `https://source.unsplash.com/random/800x600?code&sig=${latestPost.id}`
                   }
-                  alt={latestPost.title}
+                  alt={t(latestPost.titleKey)}
                 />
               </div>
               <div className="post-content">
                 <div className="post-meta">
-                  <span className="post-tag">{latestPost.tags[0]}</span>
+                  <span className="post-tag">
+                    {t(`tags.${latestPost.tags[0]}`)}
+                  </span>
                   <span className="post-date">
                     <Calendar style={{ width: "14px", height: "14px" }} />
-                    Week {latestPost.week} • {latestPost.dateRange}
+                    {t("labels.week", { week: latestPost.week })} -{" "}
+                    {t(latestPost.dateRangeKey)}
                   </span>
                 </div>
-                <h3 className="post-title">{latestPost.title}</h3>
-                <p className="post-excerpt">{latestPost.content}</p>
+                <h3 className="post-title">{t(latestPost.titleKey)}</h3>
+                <p className="post-excerpt">{t(latestPost.excerptKey)}</p>
                 <div className="post-footer">
                   <span className="post-read-more">
-                    Read more{" "}
+                    {t("labels.readMore")}{" "}
                     <ArrowRight style={{ width: "16px", height: "16px" }} />
                   </span>
                 </div>
