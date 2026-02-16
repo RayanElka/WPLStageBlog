@@ -70,6 +70,9 @@ const resources = {
         onboarding: "Onboarding",
         setup: "Setup",
         analysis: "Analysis",
+        feature: "Feature",
+        email: "Email",
+        translation: "Translation",
       },
       posts: {
         "1": {
@@ -89,6 +92,23 @@ const resources = {
             "Improved Info column translation and functionality",
             "Added waypoint option for extra transport (popover)",
             "Received new ticket: expand goods info with waste transport",
+          ],
+        },
+        "2": {
+          title: "BCC & Bulk Mail",
+          dateRange: "Feb 10 - Feb 16",
+          excerpt:
+            "Week 2: Info column PR, BCC support in the mail system, and the first steps toward mail-to-all with batching and language defaults.",
+          content:
+            "My second week started with finishing the Info column improvements and submitting the pull request. I then worked on adding a BCC field to the mail system. The tricky part was allowing a message to be sent when only BCC is filled and the To field is empty, which took some experimentation. Midweek I kept refining the BCC behavior. By the end of the week the BCC option was fully finished and I started the mail-to-all feature for suppliers and customers. To handle large volumes I implemented chunked sending (250 emails per batch). I also added translation defaults so mixed-language recipients still receive a message with the right fallbacks when multiple languages are needed.",
+          achievements: [
+            "Finalized Info column updates and submitted the PR",
+            "Implemented a BCC field in the mail system",
+            "Enabled sending when only BCC is filled and To is empty",
+            "Refined BCC behavior and edge cases",
+            "Started mail-to-all for suppliers and customers",
+            "Added chunked sending (250 emails per batch)",
+            "Added translation defaults for mixed-language recipients",
           ],
         },
       },
@@ -162,6 +182,9 @@ const resources = {
         onboarding: "Onboarding",
         setup: "Setup",
         analysis: "Analyse",
+        feature: "Functionaliteit",
+        email: "E-mail",
+        translation: "Vertaling",
       },
       posts: {
         "1": {
@@ -181,6 +204,23 @@ const resources = {
             "Info column vertaling en functionaliteit verbeterd",
             "Waypoint optie toegevoegd voor extra transport (popover)",
             "Nieuw ticket ontvangen: goods info uitbreiden met afval transport",
+          ],
+        },
+        "2": {
+          title: "BCC & Mail to All",
+          dateRange: "10 feb - 16 feb",
+          excerpt:
+            "Week 2: Info column PR, BCC-ondersteuning in het mailsysteem en de eerste stappen richting mail-to-all met batching en taal-standaarden.",
+          content:
+            "Mijn tweede week begon met het afronden van de Info column verbeteringen en het indienen van de pull request. Daarna werkte ik aan een BCC-veld in het mailsysteem. De lastigste case was dat een mail ook verstuurd moet worden wanneer enkel BCC is ingevuld en het To-veld leeg blijft, wat een paar iteraties vergde. Halverwege de week heb ik de BCC-logica verder verfijnd. Tegen het einde van de week was de BCC-optie volledig afgewerkt en ben ik gestart met de mail-to-all functionaliteit voor suppliers en customers. Om grote volumes aan te kunnen heb ik chunked sending toegevoegd (250 mails per batch). Ik heb ook vertaal-standaarden toegevoegd zodat recipients met verschillende talen toch een boodschap krijgen met de juiste fallbacks waar meerdere talen nodig zijn.",
+          achievements: [
+            "Info column updates afgerond en PR ingediend",
+            "BCC-veld toegevoegd aan het mailsysteem",
+            "Verzenden mogelijk gemaakt met enkel BCC en leeg To-veld",
+            "BCC-logica en edge cases verfijnd",
+            "Gestart met mail-to-all voor suppliers en customers",
+            "Chunked sending toegevoegd (250 mails per batch)",
+            "Vertaal-standaarden toegevoegd voor gemengde talen",
           ],
         },
       },
@@ -254,6 +294,9 @@ const resources = {
         onboarding: "Onboarding",
         setup: "Setup",
         analysis: "Analyse",
+        feature: "Fonctionnalite",
+        email: "Email",
+        translation: "Traduction",
       },
       posts: {
         "1": {
@@ -273,6 +316,23 @@ const resources = {
             "Traduction et fonctionnalite de Info column ameliorees",
             "Option waypoint ajoutee pour un transport supplementaire (popover)",
             "Nouveau ticket: etendre les goods info avec transport de dechets",
+          ],
+        },
+        "2": {
+          title: "BCC & Envoi en masse",
+          dateRange: "10 fev - 16 fev",
+          excerpt:
+            "Semaine 2: PR Info column, ajout du BCC dans le systeme mail, et debut du mail-to-all avec envoi par lots et defaults de langue.",
+          content:
+            "Ma deuxieme semaine a commence par la finalisation des ameliorations de la Info column et l'envoi de la pull request. Ensuite j'ai travaille sur l'ajout d'un champ BCC dans le systeme mail. Le point le plus difficile etait de permettre l'envoi quand seul le BCC est rempli et que le champ To reste vide, ce qui a demande plusieurs essais. Au milieu de la semaine, j'ai continue a affiner le comportement du BCC. En fin de semaine, l'option BCC etait terminee et j'ai commence la fonctionnalite mail-to-all pour suppliers et customers. Pour gerer de grands volumes, j'ai mis en place un envoi par lots (250 emails par batch). J'ai aussi ajoute des defaults de traduction pour que des destinataires avec des langues differentes recoivent un message avec les bons fallbacks quand plusieurs langues sont necessaires.",
+          achievements: [
+            "Ameliorations Info column finalisees et PR envoyee",
+            "Champ BCC ajoute au systeme mail",
+            "Envoi possible avec seulement BCC et champ To vide",
+            "Comportement BCC et cas limites affines",
+            "Debut du mail-to-all pour suppliers et customers",
+            "Envoi par lots ajoute (250 emails par batch)",
+            "Defaults de traduction ajoutes pour langues mixtes",
           ],
         },
       },
