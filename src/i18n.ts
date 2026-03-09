@@ -73,11 +73,14 @@ const resources = {
         feature: "Feature",
         email: "Email",
         translation: "Translation",
+        bugfix: "Bugfix",
+        statusupdate: "Status Updates",
+        billing: "Billing",
       },
       posts: {
         "1": {
           title: "Start & First Tickets",
-          dateRange: "Feb 02 - Feb 09",
+          dateRange: "Feb 02 - Feb 08",
           excerpt:
             "Week 1: installations, sprint/scrum meetings, codebase exploration, and the first frontend tickets.",
           content:
@@ -96,7 +99,7 @@ const resources = {
         },
         "2": {
           title: "BCC & Bulk Mail",
-          dateRange: "Feb 10 - Feb 16",
+          dateRange: "Feb 09 - Feb 15",
           excerpt:
             "Week 2: Info column PR, BCC support in the mail system, and the first steps toward mail-to-all with batching and language defaults.",
           content:
@@ -109,6 +112,57 @@ const resources = {
             "Started mail-to-all for suppliers and customers",
             "Added chunked sending (300 emails per batch)",
             "Added translation defaults for mixed-language recipients",
+          ],
+        },
+        "3": {
+          title: "Mail-to-All Polish & Status Update Fixes",
+          dateRange: "Feb 16 - Feb 22",
+          excerpt:
+            "Week 3: mail-to-all improvements, Christmas theme disabled, and a series of fixes on the status update page.",
+          content:
+            "The week started with several bugfixes and improvements on mail-to-all: a richer template with banner and logo, and chunk size set to 250 for better performance. I finished the mail-to-all ticket and added a boolean to disable the Christmas theme in the right places. The rest of the week I focused on the status update page: hiding pickup/delivery references via company preferences (initially only for LTC Logistics B.V.), de-duplicating email addresses across multiple trips, providing pickup ETA when no load/unload ETA exists, flagging late drivers when ETA exceeds appointment time, adding my own email in BCC, and adding an import/export column (Load = Export, Unload = Import). I also investigated a bug where sending time sometimes takes too long or fails, and added next-waypoint status (custom and weight status still pending). Finally, I finished the ticket to include customer reference in invoice email titles for single-transport invoices.",
+          achievements: [
+            "Improved mail-to-all template (banner + logo) and batching (250 per chunk)",
+            "Completed mail-to-all ticket",
+            "Disabled Christmas theme via a boolean flag",
+            "Applied status update fixes: references, deduped emails, ETA logic, late-driver indicator",
+            "Added import/export column and BCC self",
+            "Investigated long/failed time-sending bug",
+            "Added next-waypoint status (custom/weight pending)",
+            "Completed invoice email title with customer reference (single transport)",
+          ],
+        },
+        "4": {
+          title: "Truck Sorting & Status Update Bundle",
+          dateRange: "Feb 23 - Mar 01",
+          excerpt:
+            "Week 4: fixed truck number sorting and tackled a large bundle of status update changes, plus a new petrol cost ticket.",
+          content:
+            "I started the week by fixing a sorting bug: truck numbers were sorting only by digits and ignoring trailing letters. Then I worked through a larger status update bundle: hiding pickup/delivery references for LTC Logistics B.V., removing duplicate emails across multiple trips, adding pickup ETA when load/unload ETA is missing, marking late drivers when ETA exceeds appointment time (also in the mail), adding my own email in BCC, adding an import/export column (Load = Export, Unload = Import), improving slow/failed time sending, adding next-waypoint status (custom and weight status still pending), and sending from Trans-IT instead of downloading and opening an email. I wrapped most of this by Thursday. On Friday I picked up a new ticket to add a petrol cost.",
+          achievements: [
+            "Fixed truck number sorting for letter suffixes",
+            "Delivered a large status update bundle (UI + email changes)",
+            "Added import/export column and late-driver messaging in mail",
+            "Improved slow/failed time sending behavior",
+            "Added next-waypoint status (custom/weight pending)",
+            "Started petrol cost ticket",
+          ],
+        },
+        "5": {
+          title: "Petrol Cost & Billing Exports",
+          dateRange: "Mar 02 - Mar 08",
+          excerpt:
+            "Week 5: finished petrol cost, applied review feedback, added export-to-Excel for billing, and fixed several bugs.",
+          content:
+            "I completed the petrol cost ticket, then applied changes from the tech review on the status update work. I added a warning when a container number already exists (duplicate), and implemented extra save-transport buttons: save + send to app, and send to app + print. I also handled a larger billing ticket to export invoice overview and invoice transport to Excel in the correct language. I closed the week with two small fixes: waiting-time status staying red even when resolved, and chat timestamps switching from 12-hour (AM/PM) to 24-hour format.",
+          achievements: [
+            "Finished petrol cost ticket",
+            "Applied tech review changes to status updates",
+            "Added duplicate container-number warning",
+            "Added save + send and send + print actions for transport",
+            "Enabled billing exports to Excel with correct language",
+            "Fixed waiting-time status color bug",
+            "Switched chat timestamps to 24-hour format",
           ],
         },
       },
@@ -185,11 +239,14 @@ const resources = {
         feature: "Functionaliteit",
         email: "E-mail",
         translation: "Vertaling",
+        bugfix: "Bugfix",
+        statusupdate: "Statusupdates",
+        billing: "Facturatie",
       },
       posts: {
         "1": {
           title: "Start & Eerste Tickets",
-          dateRange: "02 feb - 09 feb",
+          dateRange: "02 feb - 08 feb",
           excerpt:
             "Week 1: installaties, sprint/scrum meetings, codebase verkenning en de eerste frontend tickets.",
           content:
@@ -208,7 +265,7 @@ const resources = {
         },
         "2": {
           title: "BCC & Mail to All",
-          dateRange: "10 feb - 16 feb",
+          dateRange: "09 feb - 15 feb",
           excerpt:
             "Week 2: Info column PR, BCC-ondersteuning in het mailsysteem en de eerste stappen richting mail-to-all met batching en taal-standaarden.",
           content:
@@ -221,6 +278,57 @@ const resources = {
             "Gestart met mail-to-all voor suppliers en customers",
             "Chunked sending toegevoegd (300 mails per batch)",
             "Vertaal-standaarden toegevoegd voor gemengde talen",
+          ],
+        },
+        "3": {
+          title: "Mail-to-All Polish & Statusupdate Fixes",
+          dateRange: "16 feb - 22 feb",
+          excerpt:
+            "Week 3: verbeteringen aan mail-to-all, kerstthema uitgezet en een reeks fixes op de statusupdate pagina.",
+          content:
+            "De week startte met bugfixes en improvements op mail-to-all: een beter ingevulde template met banner en logo, en de chunk size op 250 gezet voor optimalisatie. Ik rondde het mail-to-all ticket af en zette het kerstthema uit met een boolean op de juiste plaatsen. Daarna werkte ik verder aan de statusupdate pagina: referenties (op- en afhaal ref) weg via bedrijfsvoorkeuren (voorlopig alleen voor LTC Logistics B.V.), dubbele email adressen verwijderen over meerdere ritten, pickup ETA meegeven als er nog geen ETA is voor laden of lossen, duidelijk maken wanneer ETA later is dan het afspraakuur (chauffeur te laat), eigen email in BCC zetten, en een import/export kolom toevoegen (Load = Export, Unload = Import). Ik onderzocht ook een bug waar het doorgeven van uur soms lang duurt of faalt, en ik gaf de status van de volgende waypoint mee (custom en weight status moeten nog toegevoegd worden). Tot slot heb ik het ticket afgewerkt om klantref mee te geven in de titel van de factuurverzending bij 1 transport op 1 factuur.",
+          achievements: [
+            "Mail-to-all template verbeterd (banner + logo) en chunking op 250",
+            "Mail-to-all ticket afgerond",
+            "Kerstthema uitgezet via boolean",
+            "Statusupdate fixes: referenties, dedupe emails, ETA-logica, te-laat indicator",
+            "Import/export kolom toegevoegd en eigen email in BCC",
+            "Bug onderzocht: uur meegeven duurt soms lang of faalt",
+            "Status van volgende waypoint toegevoegd (custom/weight pending)",
+            "Klantref toegevoegd aan factuurverzending titel (1 transport/1 factuur)",
+          ],
+        },
+        "4": {
+          title: "Truck Sort & Statusupdate Bundle",
+          dateRange: "23 feb - 01 mrt",
+          excerpt:
+            "Week 4: bugfix voor truck-number sorting, grote statusupdate bundel en start van een petrol cost ticket.",
+          content:
+            "Ik begon de week met een bug: de sort bij truck numbers sorteerde enkel op nummer en niet op de letters erna. Daarna kreeg ik een groter ticket met meerdere kleinere statusupdate changes: referenties weg via bedrijfsvoorkeuren (voorlopig enkel LTC Logistics B.V.), dubbele email adressen dedupliceren over meerdere ritten, pickup ETA meegeven bij ontbrekende load/unload ETA, aangeven dat de chauffeur te laat is als ETA later is dan afspraakuur (ook in mail), eigen email in BCC zetten, import/export kolom toevoegen (Load = Export, Unload = Import), bugfix voor traag/fail uur meegeven, status van volgende waypoint meegeven (custom en weight status nog toe te voegen), en verzenden vanuit Trans-IT i.p.v. email te downloaden en te openen. Hier was ik tot donderdag mee bezig. Vrijdag heb ik een ticket opgepakt om een nieuwe kost toe te voegen: petrol kost.",
+          achievements: [
+            "Truck-number sorting gefikst (letters mee gesorteerd)",
+            "Statusupdate bundle grotendeels afgewerkt",
+            "Late-ETA melding toegevoegd (ook in mail)",
+            "Import/export kolom toegevoegd",
+            "Verzenden vanuit Trans-IT i.p.v. downloaden",
+            "Petrol kost ticket gestart",
+          ],
+        },
+        "5": {
+          title: "Petrol Kost & Facturatie Export",
+          dateRange: "02 mrt - 08 mrt",
+          excerpt:
+            "Week 5: petrol kost afgerond, review feedback verwerkt, export naar Excel voor facturatie en meerdere bugfixes.",
+          content:
+            "Ik werkte het ticket van de petrol kost volledig af. Daarna paste ik wijzigingen toe na de tech review op de statusupdate tickets. Ik kreeg een ticket om een melding te geven wanneer een containernummer al bestaat (dubbel). Ook een ticket om extra knoppen te voorzien in het save transport: opslaan en direct naar de app sturen, en direct naar de app sturen en afprinten. Vervolgens kwam een groter ticket rond facturatie overzicht en facturatie transport: export naar Excel mogelijk maken en dit in de juiste taal. Tot slot werkte ik twee kleinere bugs af: waiting time bleef rood terwijl het in orde was, en de tijdsweergave in chat stond in 12-uurs formaat en moest naar 24-uurs formaat.",
+          achievements: [
+            "Petrol kost ticket afgerond",
+            "Tech review feedback op statusupdates verwerkt",
+            "Melding bij dubbel containernummer toegevoegd",
+            "Extra save-transport knoppen toegevoegd",
+            "Facturatie export naar Excel met juiste taal",
+            "Bugfix: waiting time bleef rood",
+            "Chat timestamps naar 24-uurs formaat gezet",
           ],
         },
       },
@@ -297,11 +405,14 @@ const resources = {
         feature: "Fonctionnalite",
         email: "Email",
         translation: "Traduction",
+        bugfix: "Bugfix",
+        statusupdate: "Mises a jour statut",
+        billing: "Facturation",
       },
       posts: {
         "1": {
           title: "Demarrage & Premiers Tickets",
-          dateRange: "02 fev - 09 fev",
+          dateRange: "02 fev - 08 fev",
           excerpt:
             "Semaine 1: installations, reunions sprint/scrum, exploration de la codebase et premiers tickets frontend.",
           content:
@@ -320,7 +431,7 @@ const resources = {
         },
         "2": {
           title: "BCC & Envoi en masse",
-          dateRange: "10 fev - 16 fev",
+          dateRange: "09 fev - 15 fev",
           excerpt:
             "Semaine 2: PR Info column, ajout du BCC dans le systeme mail, et debut du mail-to-all avec envoi par lots et defaults de langue.",
           content:
@@ -333,6 +444,57 @@ const resources = {
             "Debut du mail-to-all pour suppliers et customers",
             "Envoi par lots ajoute (300 emails par batch)",
             "Defaults de traduction ajoutes pour langues mixtes",
+          ],
+        },
+        "3": {
+          title: "Mail-to-All & Correctifs Status Update",
+          dateRange: "16 fev - 22 fev",
+          excerpt:
+            "Semaine 3: ameliorations mail-to-all, theme de Noel desactive et correctifs sur la page status update.",
+          content:
+            "La semaine a commence par des correctifs et ameliorations sur mail-to-all: template enrichi (banniere + logo) et taille de batch a 250. J'ai termine le ticket mail-to-all et desactive le theme de Noel via un booleen aux bons endroits. Ensuite, j'ai travaille sur la page status update: suppression des references pickup/delivery via preferences d'entreprise (d'abord pour LTC Logistics B.V.), suppression des emails doubles sur plusieurs trajets, ajout du pickup ETA quand il n'y a pas d'ETA load/unload, indication de retard quand l'ETA depasse l'heure de rendez-vous, ajout de mon email en BCC, et ajout d'une colonne import/export (Load = Export, Unload = Import). J'ai aussi examine un bug ou l'envoi de l'heure est lent ou echoue, et j'ai ajoute le statut du waypoint suivant (custom et weight encore a ajouter). Enfin, j'ai termine le ticket pour inclure la reference client dans le titre d'envoi de facture pour 1 transport sur 1 facture.",
+          achievements: [
+            "Template mail-to-all ameliore (banniere + logo) et batches de 250",
+            "Ticket mail-to-all termine",
+            "Theme de Noel desactive via booleen",
+            "Correctifs status update: references, dedupe emails, ETA, retard",
+            "Ajout colonne import/export et BCC personnel",
+            "Investigation bug: envoi de l'heure lent ou en echec",
+            "Statut du waypoint suivant ajoute (custom/weight pending)",
+            "Reference client ajoutee au titre d'envoi de facture",
+          ],
+        },
+        "4": {
+          title: "Tri Camions & Bundle Status Update",
+          dateRange: "23 fev - 01 mars",
+          excerpt:
+            "Semaine 4: correctif du tri des camions et gros bundle de changements sur status update, puis ticket petrol cost.",
+          content:
+            "J'ai commence la semaine avec un bug de tri: les truck numbers triaient uniquement par chiffres, pas par lettres. Ensuite j'ai pris un grand ticket avec plusieurs changements status update: references pickup/delivery masquees (d'abord pour LTC Logistics B.V.), suppression des emails doubles, ajout du pickup ETA quand l'ETA load/unload manque, indication de retard quand l'ETA depasse l'heure (aussi dans l'email), ajout de mon email en BCC, colonne import/export (Load = Export, Unload = Import), correction du bug d'envoi d'heure lent, statut du waypoint suivant (custom/weight a ajouter), et envoi depuis Trans-IT au lieu de telecharger et ouvrir un email. J'etais dessus jusque jeudi. Vendredi j'ai recu un ticket pour ajouter une nouvelle cout: petrol cost.",
+          achievements: [
+            "Tri des truck numbers corrige (lettres incluses)",
+            "Bundle status update avance",
+            "Ajout retard ETA dans l'email",
+            "Colonne import/export ajoutee",
+            "Envoi depuis Trans-IT",
+            "Ticket petrol cost demarre",
+          ],
+        },
+        "5": {
+          title: "Petrol Cost & Exports Facturation",
+          dateRange: "02 mars - 08 mars",
+          excerpt:
+            "Semaine 5: petrol cost termine, retours de review integres, exports Excel facturation, et plusieurs correctifs.",
+          content:
+            "J'ai termine le ticket petrol cost, puis applique les changements apres la tech review sur status update. J'ai ajoute une alerte quand un numero de container existe deja (doublon). J'ai aussi ajoute des boutons pour save transport: enregistrer + envoyer vers l'app, et envoyer vers l'app + imprimer. Ensuite, gros ticket facturation: export Excel du resume de facturation et du transport, avec la bonne langue. Enfin, deux petits bugs: waiting time restait rouge alors que c'etait OK, et l'heure dans le chat passait de 12h (AM/PM) a 24h.",
+          achievements: [
+            "Ticket petrol cost termine",
+            "Changements post-review sur status update integres",
+            "Alerte doublon numero de container",
+            "Boutons save + send et send + print ajoutes",
+            "Exports Excel facturation avec bonne langue",
+            "Bug waiting time rouge corrige",
+            "Horodatage du chat passe en 24h",
           ],
         },
       },
