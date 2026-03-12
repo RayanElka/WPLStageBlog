@@ -140,9 +140,10 @@ const Blog: React.FC = () => {
                       {isExpanded && (
                         <div className="timeline-body">
                           {post.imageUrl && (
-                            <div className="timeline-image">
+                            <details className="timeline-image">
+                              <summary>{t("labels.viewPhoto")}</summary>
                               <img src={post.imageUrl} alt={t(post.titleKey)} />
-                            </div>
+                            </details>
                           )}
 
                           <div className="timeline-description">

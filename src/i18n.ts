@@ -35,6 +35,7 @@ const resources = {
         keyAchievements: "KEY ACHIEVEMENTS",
         technologiesUsed: "TECHNOLOGIES USED",
         all: "All",
+        viewPhoto: "View photo",
       },
       footer: {
         rights: "All rights reserved.",
@@ -154,13 +155,14 @@ const resources = {
           excerpt:
             "Week 5: finished petrol cost, applied review feedback, added export-to-Excel for billing, and fixed several bugs.",
           content:
-            "I completed the petrol cost ticket, then applied changes from the tech review on the status update work. I added a warning when a container number already exists (duplicate), and implemented extra save-transport buttons: save + send to app, and send to app + print. I also handled a larger billing ticket to export invoice overview and invoice transport to Excel in the correct language. I closed the week with two small fixes: waiting-time status staying red even when resolved, and chat timestamps switching from 12-hour (AM/PM) to 24-hour format.",
+            "I completed the petrol cost ticket, then applied changes from the tech review on the status update work. I added a warning when a container number already exists (duplicate), and implemented extra save-transport buttons: save + send to app, and send to app + print. I also handled a larger billing ticket to export invoice overview and invoice transport to Excel in the correct language. On Wednesday I attended the Moving Forward event, spoke with the companies I wanted to meet, and also connected with a few new interesting ones. I closed the week with two small fixes: waiting-time status staying red even when resolved, and chat timestamps switching from 12-hour (AM/PM) to 24-hour format.",
           achievements: [
             "Finished petrol cost ticket",
             "Applied tech review changes to status updates",
             "Added duplicate container-number warning",
             "Added save + send and send + print actions for transport",
             "Enabled billing exports to Excel with correct language",
+            "Attended the Moving Forward event and made new connections",
             "Fixed waiting-time status color bug",
             "Switched chat timestamps to 24-hour format",
           ],
@@ -201,6 +203,7 @@ const resources = {
         keyAchievements: "BELANGRIJKSTE PRESTATIES",
         technologiesUsed: "GEBRUIKTE TECHNOLOGIEEN",
         all: "Alles",
+        viewPhoto: "Bekijk foto",
       },
       footer: {
         rights: "Alle rechten voorbehouden.",
@@ -320,13 +323,14 @@ const resources = {
           excerpt:
             "Week 5: petrol kost afgerond, review feedback verwerkt, export naar Excel voor facturatie en meerdere bugfixes.",
           content:
-            "Ik werkte het ticket van de petrol kost volledig af. Daarna paste ik wijzigingen toe na de tech review op de statusupdate tickets. Ik kreeg een ticket om een melding te geven wanneer een containernummer al bestaat (dubbel). Ook een ticket om extra knoppen te voorzien in het save transport: opslaan en direct naar de app sturen, en direct naar de app sturen en afprinten. Vervolgens kwam een groter ticket rond facturatie overzicht en facturatie transport: export naar Excel mogelijk maken en dit in de juiste taal. Tot slot werkte ik twee kleinere bugs af: waiting time bleef rood terwijl het in orde was, en de tijdsweergave in chat stond in 12-uurs formaat en moest naar 24-uurs formaat.",
+            "Ik werkte het ticket van de petrol kost volledig af. Daarna paste ik wijzigingen toe na de tech review op de statusupdate tickets. Ik kreeg een ticket om een melding te geven wanneer een containernummer al bestaat (dubbel). Ook een ticket om extra knoppen te voorzien in het save transport: opslaan en direct naar de app sturen, en direct naar de app sturen en afprinten. Vervolgens kwam een groter ticket rond facturatie overzicht en facturatie transport: export naar Excel mogelijk maken en dit in de juiste taal. Op woensdag ben ik naar het Moving Forward-event geweest; ik sprak de bedrijven die ik wou spreken en leerde ook enkele nieuwe interessante bedrijven kennen. Tot slot werkte ik twee kleinere bugs af: waiting time bleef rood terwijl het in orde was, en de tijdsweergave in chat stond in 12-uurs formaat en moest naar 24-uurs formaat.",
           achievements: [
             "Petrol kost ticket afgerond",
             "Tech review feedback op statusupdates verwerkt",
             "Melding bij dubbel containernummer toegevoegd",
             "Extra save-transport knoppen toegevoegd",
             "Facturatie export naar Excel met juiste taal",
+            "Moving Forward-event bezocht en nieuwe contacten gelegd",
             "Bugfix: waiting time bleef rood",
             "Chat timestamps naar 24-uurs formaat gezet",
           ],
@@ -367,6 +371,7 @@ const resources = {
         keyAchievements: "PRINCIPALES REALISATIONS",
         technologiesUsed: "TECHNOLOGIES UTILISEES",
         all: "Tout",
+        viewPhoto: "Voir la photo",
       },
       footer: {
         rights: "Tous droits reserves.",
@@ -486,13 +491,14 @@ const resources = {
           excerpt:
             "Semaine 5: petrol cost termine, retours de review integres, exports Excel facturation, et plusieurs correctifs.",
           content:
-            "J'ai termine le ticket petrol cost, puis applique les changements apres la tech review sur status update. J'ai ajoute une alerte quand un numero de container existe deja (doublon). J'ai aussi ajoute des boutons pour save transport: enregistrer + envoyer vers l'app, et envoyer vers l'app + imprimer. Ensuite, gros ticket facturation: export Excel du resume de facturation et du transport, avec la bonne langue. Enfin, deux petits bugs: waiting time restait rouge alors que c'etait OK, et l'heure dans le chat passait de 12h (AM/PM) a 24h.",
+            "J'ai termine le ticket petrol cost, puis applique les changements apres la tech review sur status update. J'ai ajoute une alerte quand un numero de container existe deja (doublon). J'ai aussi ajoute des boutons pour save transport: enregistrer + envoyer vers l'app, et envoyer vers l'app + imprimer. Ensuite, gros ticket facturation: export Excel du resume de facturation et du transport, avec la bonne langue. Mercredi, j'ai participe a l'evenement Moving Forward, j'ai parle avec les entreprises que je voulais rencontrer et j'ai aussi decouvert de nouvelles entreprises interessantes. Enfin, deux petits bugs: waiting time restait rouge alors que c'etait OK, et l'heure dans le chat passait de 12h (AM/PM) a 24h.",
           achievements: [
             "Ticket petrol cost termine",
             "Changements post-review sur status update integres",
             "Alerte doublon numero de container",
             "Boutons save + send et send + print ajoutes",
             "Exports Excel facturation avec bonne langue",
+            "Evenement Moving Forward suivi et nouveaux contacts",
             "Bug waiting time rouge corrige",
             "Horodatage du chat passe en 24h",
           ],

@@ -59,6 +59,6 @@ export const posts: Post[] = [
     achievementsKey: "posts.5.achievements",
     technologies: ["React", "TypeScript", "Git"],
     tags: ["billing", "feature", "bugfix"],
-    imageUrl: "",
+    imageUrl: "/images/moving-forward-week5.jpg",
   },
 ];
