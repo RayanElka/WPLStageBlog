@@ -167,6 +167,19 @@ const resources = {
             "Switched chat timestamps to 24-hour format",
           ],
         },
+        "6": {
+          title: "Guardrails & Consistency Fixes",
+          dateRange: "Mar 09 - Mar 15",
+          excerpt:
+            "Week 6: small guardrails and consistency fixes that reduce errors and keep data stable.",
+          content:
+            "Week 6 was all about guardrails and consistency. I fixed a status mismatch where a green clock looked correct on the order but still appeared red in the search overview. I also made sure orders can’t be edited once a PO or invoice is set to SENT (moving it back to draft unlocks it), and added automatic locking for predefined options so the flow stays consistent. These are small changes on paper, but they remove confusion and prevent accidental edits across the system.",
+          achievements: [
+            "Fixed status mismatch (green clock vs red in search overview)",
+            "Blocked edits when PO/invoice is SENT (draft unlock)",
+            "Added auto-locking for predefined options",
+          ],
+        },
       },
     },
   },
@@ -335,6 +348,19 @@ const resources = {
             "Chat timestamps naar 24-uurs formaat gezet",
           ],
         },
+        "6": {
+          title: "Guardrails & Consistentie",
+          dateRange: "09 mrt - 15 mrt",
+          excerpt:
+            "Week 6: guardrails en consistentie fixes die fouten voorkomen en data stabiel houden.",
+          content:
+            "Week 6 draaide volledig om guardrails en consistentie. Ik fixte een status mismatch waarbij een groen klokje in het order klopte, maar in het zoekoverzicht toch rood bleef. Daarnaast blokkeerde ik wijzigingen zodra PO's of facturen op SENT staan (terugzetten naar draft unlockt), en werkte ik aan het automatisch locken van vooraf gedefinieerde opties zodat de flow consistenter blijft. Het zijn kleine ingrepen, maar ze voorkomen fouten en maken de tool betrouwbaarder.",
+          achievements: [
+            "Bugfix groen klokje vs rood in zoekoverzicht",
+            "Wijzigingen geblokkeerd bij PO/factuur op SENT (draft unlock)",
+            "Automatisch locken van vooraf gedefinieerde opties",
+          ],
+        },
       },
     },
   },
@@ -501,6 +527,19 @@ const resources = {
             "Evenement Moving Forward suivi et nouveaux contacts",
             "Bug waiting time rouge corrige",
             "Horodatage du chat passe en 24h",
+          ],
+        },
+        "6": {
+          title: "Garde-fous & Cohérence",
+          dateRange: "09 mar - 15 mar",
+          excerpt:
+            "Semaine 6: garde-fous et correctifs de coherence pour reduire les erreurs.",
+          content:
+            "Cette semaine etait axee sur les garde-fous et la coherence. J'ai corrige un decalage de statut ou une icone d'horloge etait verte dans l'ordre mais restait rouge dans la recherche. J'ai aussi bloque les modifications quand un PO ou une facture est en SENT (retour a draft pour debloquer) et ajoute le verrouillage automatique des options predefinies pour garder un flux cohérent. Ce sont de petites modifications, mais elles reduisent les erreurs et renforcent la fiabilite.",
+          achievements: [
+            "Correctif d'indicateur (clock vert/rouge dans la recherche)",
+            "Blocage des modifications quand PO/facture en SENT (draft unlock)",
+            "Verrouillage automatique de choix predefinis",
           ],
         },
       },

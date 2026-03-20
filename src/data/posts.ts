@@ -61,4 +61,16 @@ export const posts: Post[] = [
     tags: ["billing", "feature", "bugfix"],
     imageUrl: "/images/moving-forward-week5.jpg",
   },
+  {
+    id: "6",
+    week: 6,
+    titleKey: "posts.6.title",
+    dateRangeKey: "posts.6.dateRange",
+    excerptKey: "posts.6.excerpt",
+    contentKey: "posts.6.content",
+    achievementsKey: "posts.6.achievements",
+    technologies: ["React", "TypeScript", "Git"],
+    tags: ["feature", "bugfix"],
+    imageUrl: "",
+  },
 ];
