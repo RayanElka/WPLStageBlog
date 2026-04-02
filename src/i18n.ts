@@ -173,11 +173,39 @@ const resources = {
           excerpt:
             "Week 6: small guardrails and consistency fixes that reduce errors and keep data stable.",
           content:
-            "Week 6 was all about guardrails and consistency. I fixed a status mismatch where a green clock looked correct on the order but still appeared red in the search overview. I also made sure orders can’t be edited once a PO or invoice is set to SENT (moving it back to draft unlocks it), and added automatic locking for predefined options so the flow stays consistent. These are small changes on paper, but they remove confusion and prevent accidental edits across the system.",
+            "Week 6 was all about guardrails and consistency. I fixed a status mismatch where a green clock looked correct on the order but still appeared red in the search overview. I also made sure orders can't be edited once a PO or invoice is set to SENT (moving it back to draft unlocks it), and added automatic locking for predefined options so the flow stays consistent. These are small changes on paper, but they remove confusion and prevent accidental edits across the system.",
           achievements: [
             "Fixed status mismatch (green clock vs red in search overview)",
             "Blocked edits when PO/invoice is SENT (draft unlock)",
             "Added auto-locking for predefined options",
+          ],
+        },
+        "7": {
+          title: "Customer Overview & Visibility Fixes",
+          dateRange: "Mar 16 - Mar 22",
+          excerpt:
+            "Week 7: customer overview tuning, an AI location visibility fix, invoice-send edge cases, and per-company choices.",
+          content:
+            "Week 7 was about visibility and control in the overviews. I made the customer overview more configurable, fixed a bug where the AI location was not shown, and resolved an edge case when sending invoices where certain fields did not carry over correctly. I also added a per-company choice so teams can decide how a specific option should behave. Lots of small changes, but they make the screens clearer and the data more reliable.",
+          achievements: [
+            "Made the customer overview more configurable",
+            "Fixed AI location not being displayed",
+            "Resolved invoice-send edge case",
+            "Added a per-company configurable choice",
+          ],
+        },
+        "8": {
+          title: "Excel Lists & Workflow Friction",
+          dateRange: "Mar 23 - Mar 29",
+          excerpt:
+            "Week 8: custom Excel lists, filtering button fixes, multi-leg order edge cases, and credited status support.",
+          content:
+            "Week 8 focused on tooling and removing friction. I added support for building custom Excel lists, fixed buttons that stopped working while filtering, and resolved an issue where certain orders could not be placed on multiple legs. To round it off, I added a credited status for credit notes so finance follow-up is tracked cleanly. Small wins, but they smooth out day-to-day operations.",
+          achievements: [
+            "Enabled custom Excel list creation",
+            "Fixed filtering buttons that stopped working",
+            "Resolved multi-leg order edge case",
+            "Added credited status for credit notes",
           ],
         },
       },
@@ -361,6 +389,34 @@ const resources = {
             "Automatisch locken van vooraf gedefinieerde opties",
           ],
         },
+        "7": {
+          title: "Klantoverzicht & Zichtbaarheid",
+          dateRange: "16 mrt - 22 mrt",
+          excerpt:
+            "Week 7: klantoverzicht instelbaar, AI-locatie zichtbaar, factuur-versturen edge case, en keuzes per bedrijf.",
+          content:
+            "Week 7 draaide om zichtbaarheid en controle in de overzichten. Ik maakte het klantoverzicht instelbaarder, fixte een bug waarbij de AI-locatie niet werd weergegeven, en pakte een edge case aan bij facturen versturen waar bepaalde velden niet correct meegingen. Daarnaast maakte ik het mogelijk om per bedrijf zelf te kiezen hoe een specifieke optie zich gedraagt. Kleine verbeteringen, maar ze zorgen voor duidelijkere schermen en stabielere data.",
+          achievements: [
+            "Klantoverzicht instelbaarder gemaakt",
+            "AI-locatie weergave gefikst",
+            "Edge case bij facturen versturen opgelost",
+            "Per bedrijf instelbare keuze toegevoegd",
+          ],
+        },
+        "8": {
+          title: "Excel Lijsten & Frictie Wegnemen",
+          dateRange: "23 mrt - 29 mrt",
+          excerpt:
+            "Week 8: eigen Excel-lijsten, filtering-knoppen gefikst, multi-leg order issue, en credited status.",
+          content:
+            "Week 8 ging over tooling en frictie wegnemen. Ik maakte het mogelijk om eigen Excel-lijsten te bouwen, repareerde knoppen die stuk gingen bij filteren, en loste een issue op waarbij bepaalde orders niet op meerdere legs konden gezet worden. Tot slot voegde ik een credited status toe bij creditnota's, zodat de financiele flow correct opgevolgd wordt. Kleine wins, maar ze maken het dagelijkse werk een stuk vlotter.",
+          achievements: [
+            "Eigen Excel-lijsten kunnen aanmaken",
+            "Knoppen bij filteren gefikst",
+            "Issue met orders op meerdere legs opgelost",
+            "Credited status toegevoegd bij creditnota's",
+          ],
+        },
       },
     },
   },
@@ -540,6 +596,34 @@ const resources = {
             "Correctif d'indicateur (clock vert/rouge dans la recherche)",
             "Blocage des modifications quand PO/facture en SENT (draft unlock)",
             "Verrouillage automatique de choix predefinis",
+          ],
+        },
+        "7": {
+          title: "Vue Clients & Visibilite",
+          dateRange: "16 mars - 22 mars",
+          excerpt:
+            "Semaine 7: vue clients plus configurable, AI location visible, edge case factures, et choix par entreprise.",
+          content:
+            "Cette semaine etait centree sur la visibilite et le controle dans les overviews. J'ai rendu la vue clients plus configurable, corrige un bug ou la AI location ne s'affichait pas, et traite un edge case lors de l'envoi de factures ou certains champs ne suivaient pas correctement. J'ai aussi ajoute un choix par entreprise pour definir un comportement specifique. Des petites retouches, mais elles rendent les ecrans plus clairs et les donnees plus fiables.",
+          achievements: [
+            "Vue clients plus configurable",
+            "AI location affichee correctement",
+            "Edge case lors de l'envoi de factures resolu",
+            "Choix configurable par entreprise",
+          ],
+        },
+        "8": {
+          title: "Listes Excel & Moins de Friction",
+          dateRange: "23 mars - 29 mars",
+          excerpt:
+            "Semaine 8: listes Excel personnalisees, boutons de filtre corriges, multi-leg orders, et statut credited.",
+          content:
+            "Semaine 8 etait axee sur l'outillage et la reduction de friction. J'ai ajoute la creation de listes Excel personnalisees, corrige des boutons qui ne repondaient plus pendant le filtrage, et resolu un probleme ou certains orders ne pouvaient pas etre places sur plusieurs legs. Enfin, j'ai ajoute un statut credited pour les notes de credit afin de mieux suivre le flux financier. De petites victoires qui fluidifient le quotidien.",
+          achievements: [
+            "Creation de listes Excel personnalisees",
+            "Boutons de filtre corriges",
+            "Probleme multi-leg orders resolu",
+            "Statut credited ajoute pour les notes de credit",
           ],
         },
       },
