@@ -208,6 +208,38 @@ const resources = {
             "Added credited status for credit notes",
           ],
         },
+        "9": {
+          title: "Credit Notes, CMR & Planning Tweaks",
+          dateRange: "Mar 30 - Apr 05",
+          excerpt:
+            "Week 9: a batch of small but important fixes around credit notes, CMR printing, and truck planning.",
+          content:
+            "This week I handled a series of focused tickets. I added showing coordinates in the location dropdown, improved moving orders by day in the truck planning, and refined credit note flows: adding a credited status and switching the search to use credit-note date instead of creation date. I also fixed CMR print issues where 'pre announcement' appeared and the TAR/TAS timestamp was missing, and restored the missing save + print CMR button.",
+          achievements: [
+            "Showed coordinates in the location dropdown",
+            "Improved moving orders by day in truck planning",
+            "Added credited status on credit notes",
+            "Switched credit-note search to credit-note date",
+            "Fixed CMR print issues (pre-announcement + TAR/TAS time)",
+            "Restored the save + print CMR button",
+          ],
+        },
+        "10": {
+          title: "PO Details, Driver Overview & Bulk Updates",
+          dateRange: "Apr 06 - Apr 12",
+          excerpt:
+            "Week 10: PO details, driver overview sorting, bulk closing-date updates, and a team ice cream break.",
+          content:
+            "I continued with another set of fixes: adding incoming-invoice date and invoice number to the PO screen, adding sorting in the driver overview (availability, ADR, and cargocard), fixing dates that were not updating correctly, and allowing new customers to be created directly from the create transport page. I also added a bulk closing-date update. On Thursday the whole team went out for ice cream because of the warm weather, which was a nice break.",
+          achievements: [
+            "Added incoming-invoice date and invoice number on the PO screen",
+            "Enabled driver overview sorting (availability, ADR, cargocard)",
+            "Fixed incorrect date updates",
+            "Allowed creating a new customer from create transport",
+            "Added bulk closing-date updates",
+            "Team ice cream outing on Thursday",
+          ],
+        },
       },
     },
   },
@@ -417,6 +449,38 @@ const resources = {
             "Credited status toegevoegd bij creditnota's",
           ],
         },
+        "9": {
+          title: "Creditnota's, CMR & Truckplanning",
+          dateRange: "30 mrt - 05 apr",
+          excerpt:
+            "Week 9: een reeks kleinere fixes rond creditnota's, CMR-afdrukken en truckplanning.",
+          content:
+            "Deze week werkte ik een set gerichte tickets af. Ik liet coordinaten zien in de locatie dropdown, verbeterde het verschuiven van orders per dag in de truckplanning, en pakte de creditnota flow aan: credited status toegevoegd en zoeken op creditnota-datum in plaats van aanmaakdatum. Daarnaast fixte ik CMR-afdruk issues (\"pre announcement\" en ontbrekend tijdstip bij TAR/TAS) en zette ik de ontbrekende save + print CMR knop terug.",
+          achievements: [
+            "Coordinaten zichtbaar gemaakt in de locatie dropdown",
+            "Orders per dag beter kunnen verschuiven in truckplanning",
+            "Credited status toegevoegd bij creditnota's",
+            "Zoeken op creditnota-datum i.p.v. aanmaakdatum",
+            "CMR-afdruk issues gefikst (pre announcement + TAR/TAS tijd)",
+            "Ontbrekende save + print CMR knop teruggezet",
+          ],
+        },
+        "10": {
+          title: "PO Details, Drivers & Bulk Updates",
+          dateRange: "06 apr - 12 apr",
+          excerpt:
+            "Week 10: PO-details, sorting in het driver overzicht, bulk closing-date updates en een ijsje met het team.",
+          content:
+            "Ik werkte verder aan een nieuwe reeks fixes: datum van inkomende factuur en factuurnummer toegevoegd in het PO-scherm, sorting toegevoegd in het drivers overzicht (availability, ADR en cargocard), datums die niet correct werden aangepast gefikst, en de mogelijkheid toegevoegd om een nieuwe klant te maken via de create transport pagina. Ook heb ik een bulk closing-date update toegevoegd. Donderdag zijn we met het hele team een ijsje gaan eten door het warme weer, een leuke pauze tussendoor.",
+          achievements: [
+            "Inkomende factuurdatum en factuurnummer toegevoegd in PO-scherm",
+            "Sorting toegevoegd in drivers overzicht (availability, ADR, cargocard)",
+            "Bugfix voor datums die niet correct aanpasten",
+            "Nieuwe klant kunnen aanmaken via create transport pagina",
+            "Bulk closing-date update toegevoegd",
+            "Team-ijsje op donderdag door het warme weer",
+          ],
+        },
       },
     },
   },
@@ -624,6 +688,38 @@ const resources = {
             "Boutons de filtre corriges",
             "Probleme multi-leg orders resolu",
             "Statut credited ajoute pour les notes de credit",
+          ],
+        },
+        "9": {
+          title: "Credit Notes, CMR & Planning",
+          dateRange: "30 mars - 05 avr",
+          excerpt:
+            "Semaine 9: une serie de petites corrections autour des credit notes, des impressions CMR et du planning.",
+          content:
+            "Cette semaine j'ai traite plusieurs tickets: affichage des coordonnees dans le dropdown de localisation, amelioration du deplacement des orders par jour dans le planning camion, et corrections sur les credit notes (statut credited + recherche par date de credit note). J'ai aussi corrige l'impression CMR ou \"pre announcement\" apparaissait et ou le temps TAR/TAS manquait, et j'ai remis le bouton save + print CMR.",
+          achievements: [
+            "Coordonnees visibles dans le dropdown de localisation",
+            "Deplacement des orders par jour ameliore dans le planning",
+            "Statut credited ajoute sur les credit notes",
+            "Recherche par date de credit note (pas creation)",
+            "Impression CMR corrigee (pre announcement + TAR/TAS)",
+            "Bouton save + print CMR restaure",
+          ],
+        },
+        "10": {
+          title: "Details PO, Drivers & Updates en Bulk",
+          dateRange: "06 avr - 12 avr",
+          excerpt:
+            "Semaine 10: details PO, tri dans la vue drivers, updates de closing date en bulk, et une pause glace avec l'equipe.",
+          content:
+            "J'ai poursuivi avec d'autres correctifs: date de facture entrante et numero de facture ajoutes dans l'ecran PO, tri dans la vue drivers (availability, ADR, cargocard), correction des dates qui ne se mettaient pas a jour, et creation d'un nouveau client depuis la page create transport. J'ai aussi ajoute une mise a jour bulk de la closing date. Jeudi, toute l'equipe est allee manger une glace a cause du beau temps, un bon moment de pause.",
+          achievements: [
+            "Date facture entrante + numero de facture ajoutes dans PO",
+            "Tri dans la vue drivers (availability, ADR, cargocard)",
+            "Correction des dates mal mises a jour",
+            "Creation client depuis create transport",
+            "Update bulk de la closing date",
+            "Glace avec l'equipe jeudi",
           ],
         },
       },
