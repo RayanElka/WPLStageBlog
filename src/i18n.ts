@@ -240,6 +240,46 @@ const resources = {
             "Team ice cream outing on Thursday",
           ],
         },
+        "11": {
+          title: "PO Locking & Overview Columns",
+          dateRange: "Apr 13 - Apr 19",
+          excerpt:
+            "Week 11: block edits after PO creation/export, and expand supplier/invoice overviews with bookkeeping columns.",
+          content:
+            "This week I handled two tickets. First, once a PO is created and exported/closed, it should no longer be editable; I disabled edits on the arrow-controlled fields to prevent changes after completion. Second, I made the suppliers and invoices overviews configurable and added new columns such as customer name + accounting code, transport numbers, and a separate bookkeeping-code (relation number) column. For each ticket I also made extra adjustments to optimize it before submitting the pull request.",
+          achievements: [
+            "Blocked edits after PO creation/export",
+            "Made suppliers and invoices overviews configurable",
+            "Added new columns (customer name + accounting code, transport numbers, bookkeeping code)",
+            "Optimized each ticket before submitting the PR",
+          ],
+        },
+        "12": {
+          title: "Drivers Overview & Truck Select",
+          dateRange: "Apr 20 - Apr 26",
+          excerpt:
+            "Week 12: show the driver's truck in the drivers overview with a default and editable select.",
+          content:
+            "I added the driver's truck to the drivers overview, with a default value that can be changed via a select. As with the other tickets, I made additional adjustments to optimize it before submitting the pull request.",
+          achievements: [
+            "Displayed the driver's truck in the drivers overview",
+            "Added a default truck value with selectable changes",
+            "Optimized the ticket before submitting the PR",
+          ],
+        },
+        "13": {
+          title: "Terminal Time Export & Invoice Updates Start",
+          dateRange: "Apr 27 - May 03",
+          excerpt:
+            "Week 13: worked on export data for terminal waiting times and driver punctuality, and started a broader invoice updates track.",
+          content:
+            "I worked on extracting data about how long drivers stay at terminals and whether they arrive on time, with export options per customer and per terminal. This required quite a lot of backend changes, so it took longer than expected. By the end of the week I had also started invoice updates focused on usability and faster status handling: larger selection checkboxes, remembering selected item count in local storage, color-coding statuses, automatically setting status to paid when a payment date is entered, easier select-all with quick unselect for unpaid filtering, and improving bulk payment-date actions.",
+          achievements: [
+            "Implemented export data for terminal waiting times and on-time arrivals",
+            "Handled substantial backend changes for this work",
+            "Started invoice updates with UX and billing-flow improvements",
+          ],
+        },
       },
     },
   },
@@ -481,6 +521,46 @@ const resources = {
             "Team-ijsje op donderdag door het warme weer",
           ],
         },
+        "11": {
+          title: "PO Locking & Overzichtkolommen",
+          dateRange: "13 apr - 19 apr",
+          excerpt:
+            "Week 11: aanpassingen blokkeren na PO-aanmaak/export en overzichten uitbreiden met boekhoudcode en extra kolommen.",
+          content:
+            "Deze week werkte ik aan twee tickets. Ten eerste: zodra een PO is aangemaakt en geexporteerd/afgerond mag er niets meer aangepast worden; daarom blokkeerde ik aanpassingen op de velden met pijltjes. Daarnaast maakte ik het suppliers- en invoices-overzicht configureerbaar en voegde ik nieuwe kolommen toe, zoals klantnaam + accounting code, transportnummers en een aparte kolom voor de boekhoudcode (relatienummer). Bij elk ticket heb ik nog extra aanpassingen gedaan om het te optimaliseren voordat ik de pull request indiende.",
+          achievements: [
+            "Aanpassingen geblokkeerd na PO-aanmaak/export",
+            "Suppliers- en invoices-overzicht configureerbaar gemaakt",
+            "Nieuwe kolommen toegevoegd (klantnaam + accounting code, transportnummers, boekhoudcode)",
+            "Tickets geoptimaliseerd voor PR",
+          ],
+        },
+        "12": {
+          title: "Drivers Overzicht & Truck Select",
+          dateRange: "20 apr - 26 apr",
+          excerpt:
+            "Week 12: driver truck zichtbaar maken in drivers overzicht met een standaardwaarde en aanpasbare select.",
+          content:
+            "Ik voegde in het drivers-overzicht de truck van de driver toe, met een standaardwaarde die je via een select kunt aanpassen. Ook bij dit ticket heb ik nog extra aanpassingen gedaan om het te optimaliseren voordat ik de pull request indiende.",
+          achievements: [
+            "Truck zichtbaar gemaakt in drivers overzicht",
+            "Standaard truck ingesteld en aanpasbaar via select",
+            "Ticket geoptimaliseerd voor PR",
+          ],
+        },
+        "13": {
+          title: "Terminal Data Export & Start Invoice Updates",
+          dateRange: "27 apr - 03 mei",
+          excerpt:
+            "Week 13: gewerkt aan export van terminal wachttijd- en op-tijd data, en gestart met een bredere reeks invoice updates.",
+          content:
+            "Ik werkte aan het uittrekken van data over hoe lang chauffeurs op terminals staan en of chauffeurs op tijd aankomen, met exportmogelijkheden per klant en per terminal. Hiervoor waren heel wat backend changes nodig, waardoor het iets langer duurde. Tegen het einde van de week was ik ook begonnen aan invoice updates, vooral rond gebruiksgemak en snellere statusverwerking: grotere select-checkboxen, onthouden hoeveel items getoond worden via local storage, kleurcodes per status, automatisch op paid zetten bij ingave van een betaaldatum, select-all eenvoudiger maken met snel uitsluiten van niet-betaalde statussen, en het ingeven van betaaldatum in bulk vlotter maken.",
+          achievements: [
+            "Export van wachttijd- en op-tijd data uitgewerkt",
+            "Veel backend changes verwerkt voor dit werk",
+            "Gestart met invoice updates voor UX en facturatieflow",
+          ],
+        },
       },
     },
   },
@@ -720,6 +800,46 @@ const resources = {
             "Creation client depuis create transport",
             "Update bulk de la closing date",
             "Glace avec l'equipe jeudi",
+          ],
+        },
+        "11": {
+          title: "PO Locking & Colonnes Overviews",
+          dateRange: "13 avr - 19 avr",
+          excerpt:
+            "Semaine 11: bloquer les modifications apres creation/export du PO, et enrichir les overviews suppliers/invoices avec des colonnes.",
+          content:
+            "Cette semaine j'ai traite deux tickets. D'abord, une fois un PO cree et exporte/termine, il ne doit plus etre modifiable; j'ai bloque les champs avec fleches pour eviter tout changement apres coup. Ensuite, j'ai rendu les overviews suppliers et invoices configurables et ajoute de nouvelles colonnes: nom client + accounting code, numeros de transport, et une colonne separee pour le bookkeeping code (relation number). Pour chaque ticket j'ai aussi fait des ajustements pour l'optimiser avant de soumettre la pull request.",
+          achievements: [
+            "Modifs bloquees apres creation/export du PO",
+            "Overviews suppliers/invoices configurables",
+            "Nouvelles colonnes (nom client + accounting code, numeros transport, bookkeeping code)",
+            "Tickets optimises avant la PR",
+          ],
+        },
+        "12": {
+          title: "Drivers Overview & Truck Select",
+          dateRange: "20 avr - 26 avr",
+          excerpt:
+            "Semaine 12: afficher le truck du driver dans l'overview avec une valeur par defaut et un select editable.",
+          content:
+            "J'ai ajoute le truck du driver dans la vue drivers, avec une valeur par defaut modifiable via un select. Comme pour les autres tickets, j'ai apporte des ajustements pour optimiser avant la pull request.",
+          achievements: [
+            "Truck du driver visible dans la vue drivers",
+            "Valeur par defaut + select modifiable",
+            "Ticket optimise avant la PR",
+          ],
+        },
+        "13": {
+          title: "Export Data Terminal & Debut Invoice Updates",
+          dateRange: "27 avr - 03 mai",
+          excerpt:
+            "Semaine 13: travail sur l'export des donnees de temps terminal et ponctualite, puis debut d'une serie plus large de mises a jour invoices.",
+          content:
+            "J'ai travaille sur l'extraction de donnees sur le temps passe par les chauffeurs au terminal et sur leur ponctualite, avec des exports par client et par terminal. Ce travail a demande beaucoup de changements backend, ce qui a rallonge la duree. En fin de semaine, j'ai aussi commence des mises a jour invoices orientees ergonomie et rapidite de traitement des statuts: cases de selection plus grandes, memorisation du nombre d'elements affiches via local storage, couleurs par statut, passage automatique a paid quand une date de paiement est renseignee, select-all plus pratique avec deselection rapide des statuts non payes, et actions en lot plus fluides pour les dates de paiement.",
+          achievements: [
+            "Export des donnees de temps terminal et ponctualite implemente",
+            "Nombreux changements backend realises pour ce travail",
+            "Debut des mises a jour invoices pour UX et flux de facturation",
           ],
         },
       },
