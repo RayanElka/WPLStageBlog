@@ -155,13 +155,18 @@ const resources = {
           excerpt:
             "Week 5: finished petrol cost, applied review feedback, added export-to-Excel for billing, and fixed several bugs.",
           content:
-            "I completed the petrol cost ticket, then applied changes from the tech review on the status update work. I added a warning when a container number already exists (duplicate), and implemented extra save-transport buttons: save + send to app, and send to app + print. I also handled a larger billing ticket to export invoice overview and invoice transport to Excel in the correct language. On Wednesday I attended the Moving Forward event, spoke with the companies I wanted to meet, and also connected with a few new interesting ones. I closed the week with two small fixes: waiting-time status staying red even when resolved, and chat timestamps switching from 12-hour (AM/PM) to 24-hour format.",
+            "I completed the petrol cost ticket, then applied changes from the tech review on the status update work. I added a warning when a container number already exists (duplicate), and implemented extra save-transport buttons: save + send to app, and send to app + print. I also handled a larger billing ticket to export invoice overview and invoice transport to Excel in the correct language. In the same period I completed several additional tickets: GL reference per customer and supplier, preventing the clock from turning green when extra costs are forwarded (only waiting hours should turn green), status-update documentation updates, automatic ETD recalculation when a waypoint changes, adding truck number plate in auto-order email, sorting in suppliers trucks column, and showing text across the whole field where needed. On Wednesday I attended the Moving Forward event, spoke with the companies I wanted to meet, and also connected with a few new interesting ones. I closed the week with two small fixes: waiting-time status staying red even when resolved, and chat timestamps switching from 12-hour (AM/PM) to 24-hour format.",
           achievements: [
             "Finished petrol cost ticket",
             "Applied tech review changes to status updates",
             "Added duplicate container-number warning",
             "Added save + send and send + print actions for transport",
             "Enabled billing exports to Excel with correct language",
+            "Added GL reference per customer and supplier",
+            "Fixed green-clock logic for extra-cost forwarding",
+            "Updated status-update documentation and ETD recalculation",
+            "Added truck number plate in auto-order email",
+            "Added suppliers-trucks sorting and full-field text display",
             "Attended the Moving Forward event and made new connections",
             "Fixed waiting-time status color bug",
             "Switched chat timestamps to 24-hour format",
@@ -278,6 +283,32 @@ const resources = {
             "Implemented export data for terminal waiting times and on-time arrivals",
             "Handled substantial backend changes for this work",
             "Started invoice updates with UX and billing-flow improvements",
+          ],
+        },
+        "14": {
+          title: "Invoice Updates Finalization & Test Recovery",
+          dateRange: "May 04 - May 10",
+          excerpt:
+            "Week 14: finalized invoice updates and started a major testing recovery track.",
+          content:
+            "I started the week by finishing the invoice updates ticket in detail: larger selection checkboxes, remembering selected item counts, clearer status colors, automatic paid status when payment date is set, better select-all behavior, and smoother bulk payment-date actions. After that I switched to a testing ticket. In the existing suite of around 1000 tests, 124 were failing and 126 were pending. I worked through failing tests first, then removed .skip from pending tests and fixed those as well.",
+          achievements: [
+            "Finalized invoice updates with UX and billing-flow improvements",
+            "Started large-scale test recovery in the existing suite",
+            "Worked through failed tests and unskipped pending tests",
+          ],
+        },
+        "15": {
+          title: "Testing Progress & Final Ticket Wrap-Up",
+          dateRange: "May 11 - May 17",
+          excerpt:
+            "Week 15: continued stabilizing tests and wrapped up final ticket work.",
+          content:
+            "In week 15 I continued cleaning up and stabilizing the test suite so changes were safer to release. I kept fixing edge cases and remaining unstable scenarios from both failed and previously pending tests. The final ticket shown in my latest screenshot happened right after week 15 and was completed on Wednesday.",
+          achievements: [
+            "Continued test stabilization and edge-case fixes",
+            "Improved confidence in release quality through test cleanup",
+            "Final ticket completed on Wednesday after week 15",
           ],
         },
       },
@@ -436,13 +467,18 @@ const resources = {
           excerpt:
             "Week 5: petrol kost afgerond, review feedback verwerkt, export naar Excel voor facturatie en meerdere bugfixes.",
           content:
-            "Ik werkte het ticket van de petrol kost volledig af. Daarna paste ik wijzigingen toe na de tech review op de statusupdate tickets. Ik kreeg een ticket om een melding te geven wanneer een containernummer al bestaat (dubbel). Ook een ticket om extra knoppen te voorzien in het save transport: opslaan en direct naar de app sturen, en direct naar de app sturen en afprinten. Vervolgens kwam een groter ticket rond facturatie overzicht en facturatie transport: export naar Excel mogelijk maken en dit in de juiste taal. Op woensdag ben ik naar het Moving Forward-event geweest; ik sprak de bedrijven die ik wou spreken en leerde ook enkele nieuwe interessante bedrijven kennen. Tot slot werkte ik twee kleinere bugs af: waiting time bleef rood terwijl het in orde was, en de tijdsweergave in chat stond in 12-uurs formaat en moest naar 24-uurs formaat.",
+            "Ik werkte het ticket van de petrol kost volledig af. Daarna paste ik wijzigingen toe na de tech review op de statusupdate tickets. Ik kreeg een ticket om een melding te geven wanneer een containernummer al bestaat (dubbel). Ook een ticket om extra knoppen te voorzien in het save transport: opslaan en direct naar de app sturen, en direct naar de app sturen en afprinten. Vervolgens kwam een groter ticket rond facturatie overzicht en facturatie transport: export naar Excel mogelijk maken en dit in de juiste taal. In dezelfde periode heb ik extra tickets afgewerkt: GL reference per klant en supplier, de klok niet groen laten worden bij doorgestuurde extra kosten (enkel wachturen mogen groen), statusupdates documentatie bijwerken, ETD automatisch herberekenen wanneer een waypoint wordt aangepast, truck nummerplaat toevoegen in auto-order mail, sorting toevoegen in suppliers trucks kolom, en tekst over het volledige vak weergeven waar nodig. Op woensdag ben ik naar het Moving Forward-event geweest; ik sprak de bedrijven die ik wou spreken en leerde ook enkele nieuwe interessante bedrijven kennen. Tot slot werkte ik twee kleinere bugs af: waiting time bleef rood terwijl het in orde was, en de tijdsweergave in chat stond in 12-uurs formaat en moest naar 24-uurs formaat.",
           achievements: [
             "Petrol kost ticket afgerond",
             "Tech review feedback op statusupdates verwerkt",
             "Melding bij dubbel containernummer toegevoegd",
             "Extra save-transport knoppen toegevoegd",
             "Facturatie export naar Excel met juiste taal",
+            "GL reference per klant en supplier toegevoegd",
+            "Kloklogica gefikst bij doorgestuurde extra kosten",
+            "Statusupdates documentatie en ETD-herberekening uitgewerkt",
+            "Truck nummerplaat toegevoegd in auto-order mail",
+            "Sorting in suppliers trucks kolom en volledige tekstweergave toegevoegd",
             "Moving Forward-event bezocht en nieuwe contacten gelegd",
             "Bugfix: waiting time bleef rood",
             "Chat timestamps naar 24-uurs formaat gezet",
@@ -559,6 +595,32 @@ const resources = {
             "Export van wachttijd- en op-tijd data uitgewerkt",
             "Veel backend changes verwerkt voor dit werk",
             "Gestart met invoice updates voor UX en facturatieflow",
+          ],
+        },
+        "14": {
+          title: "Invoice Updates Afwerken & Testherstel",
+          dateRange: "04 mei - 10 mei",
+          excerpt:
+            "Week 14: invoice updates volledig afgewerkt en gestart met een groot testing-hersteltraject.",
+          content:
+            "Ik ben de week gestart met het volledig afwerken van het invoice updates ticket: grotere select-checkboxen, onthouden van aantallen, duidelijkere statuskleuren, automatisch paid zetten bij betaaldatum, betere select-all flow, en vlottere bulk-acties voor betaaldatums. Daarna ben ik overgeschakeld naar een testing ticket. In de bestaande suite van ongeveer 1000 tests waren er 124 failed en 126 pending. Ik heb eerst de failed tests aangepakt en daarna .skip verwijderd bij pending tests en die ook gefikst.",
+          achievements: [
+            "Invoice updates volledig afgewerkt met UX- en facturatieverbeteringen",
+            "Groot testing-hersteltraject gestart in bestaande test suite",
+            "Failed tests gefikst en pending tests na unskip aangepakt",
+          ],
+        },
+        "15": {
+          title: "Testing Verder Stabiliseren & Laatste Ticket",
+          dateRange: "11 mei - 17 mei",
+          excerpt:
+            "Week 15: verder gewerkt aan teststabiliteit en afronding van de laatste ticketflow.",
+          content:
+            "In week 15 heb ik de test suite verder opgeschoond en gestabiliseerd zodat wijzigingen veiliger uitgerold konden worden. Ik bleef edge cases en resterende onstabiele scenario's wegwerken uit zowel failed als eerder pending tests. Het laatste ticket uit mijn recentste screenshot viel net na week 15 en werd afgerond op woensdag.",
+          achievements: [
+            "Teststabiliteit verder verhoogd met edge-case fixes",
+            "Betrouwbaarheid van opleveringen verbeterd via test cleanup",
+            "Laatste ticket afgerond op woensdag na week 15",
           ],
         },
       },
@@ -717,13 +779,18 @@ const resources = {
           excerpt:
             "Semaine 5: petrol cost termine, retours de review integres, exports Excel facturation, et plusieurs correctifs.",
           content:
-            "J'ai termine le ticket petrol cost, puis applique les changements apres la tech review sur status update. J'ai ajoute une alerte quand un numero de container existe deja (doublon). J'ai aussi ajoute des boutons pour save transport: enregistrer + envoyer vers l'app, et envoyer vers l'app + imprimer. Ensuite, gros ticket facturation: export Excel du resume de facturation et du transport, avec la bonne langue. Mercredi, j'ai participe a l'evenement Moving Forward, j'ai parle avec les entreprises que je voulais rencontrer et j'ai aussi decouvert de nouvelles entreprises interessantes. Enfin, deux petits bugs: waiting time restait rouge alors que c'etait OK, et l'heure dans le chat passait de 12h (AM/PM) a 24h.",
+            "J'ai termine le ticket petrol cost, puis applique les changements apres la tech review sur status update. J'ai ajoute une alerte quand un numero de container existe deja (doublon). J'ai aussi ajoute des boutons pour save transport: enregistrer + envoyer vers l'app, et envoyer vers l'app + imprimer. Ensuite, gros ticket facturation: export Excel du resume de facturation et du transport, avec la bonne langue. Dans la meme periode, j'ai aussi livre plusieurs tickets: reference GL par client et supplier, regle de clock (pas verte pour les couts extra transferts, uniquement pour les heures d'attente), mise a jour de la documentation status updates, recalcul automatique ETD lors d'un changement de waypoint, ajout de la plaque camion dans l'email auto-order, tri dans la colonne suppliers trucks, et affichage du texte sur tout le champ quand necessaire. Mercredi, j'ai participe a l'evenement Moving Forward, j'ai parle avec les entreprises que je voulais rencontrer et j'ai aussi decouvert de nouvelles entreprises interessantes. Enfin, deux petits bugs: waiting time restait rouge alors que c'etait OK, et l'heure dans le chat passait de 12h (AM/PM) a 24h.",
           achievements: [
             "Ticket petrol cost termine",
             "Changements post-review sur status update integres",
             "Alerte doublon numero de container",
             "Boutons save + send et send + print ajoutes",
             "Exports Excel facturation avec bonne langue",
+            "Reference GL ajoutee par client et supplier",
+            "Regle de clock corrigee pour les couts extra",
+            "Documentation status updates et recalcul ETD ajoutes",
+            "Plaque camion ajoutee dans l'email auto-order",
+            "Tri suppliers trucks et affichage texte plein champ",
             "Evenement Moving Forward suivi et nouveaux contacts",
             "Bug waiting time rouge corrige",
             "Horodatage du chat passe en 24h",
@@ -840,6 +907,32 @@ const resources = {
             "Export des donnees de temps terminal et ponctualite implemente",
             "Nombreux changements backend realises pour ce travail",
             "Debut des mises a jour invoices pour UX et flux de facturation",
+          ],
+        },
+        "14": {
+          title: "Finalisation Invoice Updates & Reprise des Tests",
+          dateRange: "04 mai - 10 mai",
+          excerpt:
+            "Semaine 14: finalisation complete des invoice updates, puis demarrage d'un important chantier de correction des tests.",
+          content:
+            "J'ai commence la semaine par finaliser en detail le ticket invoice updates: cases de selection plus grandes, memorisation des quantites affichees, couleurs de statut plus claires, passage automatique a paid avec date de paiement, meilleur select-all, et actions bulk plus fluides. Ensuite, je suis passe a un ticket testing. Dans la suite existante d'environ 1000 tests, 124 etaient failed et 126 etaient pending. J'ai d'abord corrige les failed, puis retire les .skip des pending et corrige ceux-la aussi.",
+          achievements: [
+            "Invoice updates finalisees avec ameliorations UX et facturation",
+            "Demarrage d'un grand chantier de reprise des tests",
+            "Correction des failed et des pending apres retrait de .skip",
+          ],
+        },
+        "15": {
+          title: "Stabilisation Tests & Dernier Ticket",
+          dateRange: "11 mai - 17 mai",
+          excerpt:
+            "Semaine 15: poursuite de la stabilisation des tests et cloture du dernier flux ticket.",
+          content:
+            "En semaine 15, j'ai continue a nettoyer et stabiliser la suite de tests pour rendre les livraisons plus sures. J'ai traite des edge cases et les derniers scenarios instables issus des failed et des anciens pending. Le dernier ticket visible dans ma capture la plus recente est arrive juste apres la semaine 15 et s'est termine le mercredi.",
+          achievements: [
+            "Stabilisation continue de la suite de tests",
+            "Meilleure fiabilite de livraison grace au nettoyage des tests",
+            "Dernier ticket termine le mercredi apres la semaine 15",
           ],
         },
       },

@@ -118,17 +118,6 @@ const Landing: React.FC = () => {
             </div>
 
             <Link to="/blog" className="post-card post-card-horizontal">
-              <div className="post-image-wrapper">
-                <div className="post-image-overlay"></div>
-                <img
-                  className="post-image"
-                  src={
-                    latestPost.imageUrl ||
-                    `https://source.unsplash.com/random/800x600?code&sig=${latestPost.id}`
-                  }
-                  alt={t(latestPost.titleKey)}
-                />
-              </div>
               <div className="post-content">
                 <div className="post-meta">
                   <span className="post-tag">

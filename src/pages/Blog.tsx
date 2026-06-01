@@ -139,13 +139,6 @@ const Blog: React.FC = () => {
 
                       {isExpanded && (
                         <div className="timeline-body">
-                          {post.imageUrl && (
-                            <details className="timeline-image">
-                              <summary>{t("labels.viewPhoto")}</summary>
-                              <img src={post.imageUrl} alt={t(post.titleKey)} />
-                            </details>
-                          )}
-
                           <div className="timeline-description">
                             {t(post.contentKey)
                               .split("\n")

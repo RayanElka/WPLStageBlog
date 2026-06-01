@@ -20,11 +20,6 @@ const About: React.FC = () => {
             <div className="profile-card">
               <div className="profile-card-accent"></div>
               <div className="profile-card-body">
-                <div className="profile-avatar-wrapper">
-                  <div className="profile-avatar">
-                    <img src="" alt="Profile" />
-                  </div>
-                </div>
                 <h2 className="profile-name">Rayan El Kaouid</h2>
                 <div className="profile-role">
                   <Terminal /> {t("about.profileRole")}
