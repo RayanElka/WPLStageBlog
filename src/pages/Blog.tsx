@@ -17,7 +17,7 @@ const Blog: React.FC = () => {
   }, []);
 
   const filteredPosts = useMemo(() => {
-    let sortedPosts = [...posts].sort((a, b) => a.week - b.week);
+    const sortedPosts = [...posts].sort((a, b) => a.week - b.week);
     if (!selectedTag) return sortedPosts;
     return sortedPosts.filter((post) => post.tags.includes(selectedTag));
   }, [selectedTag]);
